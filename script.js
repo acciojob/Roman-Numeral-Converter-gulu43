@@ -1,5 +1,4 @@
-function convertToRoman(num) {
-  	 const arr = [
+const arr = [
         ["M", 1000],
         ["CM", 900],
         ["D", 500],
@@ -18,7 +17,7 @@ function convertToRoman(num) {
     let str = "";
 
     for (let i = 0; i < arr.length; i++) {
-        while (num>arr[i][1]) {
+        while (num>=arr[i][1]) {
             num = num-arr[i][1];
             str = str+arr[i][0];
         }    
@@ -26,9 +25,6 @@ function convertToRoman(num) {
     }
     // console.log(str); 
     return str;
-
-  //your code here
-
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
